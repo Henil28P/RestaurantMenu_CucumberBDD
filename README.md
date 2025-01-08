@@ -87,3 +87,10 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - More complex Cucumber features - scenario outline and parameter transformation <br>
 - Hook step definitions to browser automation - with Selenium <br>
 - SpecFlow for .NET developers (REST API call) <br>
+
+# 3 key components of Cucumber:
+1. <b>Feature files</b> - written in a domain-specific business language called Gherkin - this is the file in which we use simple business language to define software features or the desired behaviour of the software.
+2. <b>Step definition files</b> - written in Java or any other.
+- Each step of the feature file will be mapped to a method in the step definitions file.
+3. <b>Test runner files</b> - just a test class based on a unit testing tool that glues the feature file and the step definitions file.
+- This test runner file will be based on Java JUnit testing tool for Java projects.
