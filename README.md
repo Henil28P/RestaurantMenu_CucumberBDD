@@ -135,3 +135,13 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 
 # 4. User story
 - As a manager, I should be able to add a menu item to my restaurant location’s menu.
+
+# Feature File
+- Need for a Feature File
+1. Business specification document
+- Business stakeholders, such as product owner, business analysis, end users
+- Technical stakeholders, such as developers, architects, database administrators
+- Quality assurance stakeholders, such as QA testers, testing automation engineers, usability testers.
+2. Solution: Feature file
+- Written in Gherkin domain-specific language (DSL)
+3. Example of Gherkin feature file - MenuManagement.feature in the newly created “features” package
