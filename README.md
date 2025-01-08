@@ -47,3 +47,23 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Answers the question - what should the system do so that it is usable and useful in production?<br>
 - Focuses on requirements<br>
 - Often used interchangeably with BDD<br>
+
+<h3>Examples of TDD and ATDD</h3><br>
+<b>User Story:</b> As an ATM user, I should be able to view my account balance.<br>
+<br>
+<b><i>TDD Examples:</b></i><br>
+- PIN correctness check: regular expressions check for PIN, check for network connectivity, balance displayed format, incorrect PIN check, unreadable card<br>
+- <b>Scope:</b> API methods<br>
+- <b>Author(s):</b> developers<br>
+<br>
+<b><i>BDD Examples:</b></i><br>
+- <b>Scenario 1:</b> display balance for correct PIN<br>
+- <b>Scenario 2:</b> display error message for incorrect <br>
+- <b>Scope:</b> the system or a subsystem<br>
+- <b>Author(s):</b> developers, customers, business analysts, product owner, testers, QA automation engineers<br>
+<br>
+<b><i>ATDD Examples:</b></i><br>
+- Can be identical to BDD or like:<br>
+- Account balance inquiry<br>
+- <b>Scope:</b> subset or superset of BDD scenarios<br>
+- <b>Author(s):</b> customers, business analysts, product owner<br>
