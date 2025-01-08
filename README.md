@@ -110,3 +110,28 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 # Continuous Integration
 - Invoke step definitions via test runner
 - Can be integrated with the Build Tool (Maven) to enable continuous integration (CI) tool like Jenkins.
+
+# Summary of BDD
+- Advantage of concrete example - Concrete examples can be used as the basis to build automated test scenarios, Teams can build documentation with concrete examples and refer to it later for common understanding of requirements, and it helps clarify requirements.
+- Incorrect statement about BDD or TDD - BDD is for the business analysts whereas TDD is only for developers. BDD is designed to be used by developers, requirement specialists, product owners, and QA team members. It is designed to facilitate collaboration among business and technical stakeholders. TDD is developer-centric, but the benefits of TDD are applicable to all stakeholders, not just developers.
+- A feature file is NOT written in a high-level programming language. Instead, a feature file is written in a domain-specific language, such as Gherkin. It is designed to be understandable to technical and non-technical stakeholders.
+
+# Cucumber Workflow
+# 1. The system
+- Eat More Cucumbers is a small but fast-growing restaurant chain
+- Build a website for a restaurant chain
+- User stories, such as set up locations, set up menu items and prices, generate bill, process payments, process online orders, analytics
+- Users, such as managers, servers, online customers
+
+# 2. The domain
+- Problem domain - a list of business objects or business object types that we talk about in our focused area of our business problem.
+- Example: Servers, bartender, chef, food item, payment, tax, gratuity, discount, inventory, and so on.
+
+# 3. Key players
+- 3 key stakeholder types participating in this user story workshop session:
+1. Business stakeholders (Product Owner and Business Analysts),
+2. Development team (lead software architect and key software developers),
+3. Testers (QA Automation engineers).
+
+# 4. User story
+- As a manager, I should be able to add a menu item to my restaurant location’s menu.
