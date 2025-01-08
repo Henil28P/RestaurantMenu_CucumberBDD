@@ -94,3 +94,19 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Each step of the feature file will be mapped to a method in the step definitions file.
 3. <b>Test runner files</b> - just a test class based on a unit testing tool that glues the feature file and the step definitions file.
 - This test runner file will be based on Java JUnit testing tool for Java projects.
+
+# Examples of Cucumber components
+1. <b>Example of feature:</b> Refund issuance
+2. <b>Example of one of the scenario of above feature:</b> refund processing for an item that is not shipped yet.
+3. <b>Example of steps for the above scenario:</b>
+- Validating purchase order information
+- Creating a refund transaction
+
+# What does Cucumber do?
+- Test automation tool that links scenario steps in the feature file to step definition methods.
+- Step definitions can be run from test runner class (JUnit or TestNG)
+- Step definitions test the system under test (SUT)
+
+# Continuous Integration
+- Invoke step definitions via test runner
+- Can be integrated with the Build Tool (Maven) to enable continuous integration (CI) tool like Jenkins.
