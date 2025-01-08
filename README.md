@@ -67,3 +67,8 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Account balance inquiry<br>
 - <b>Scope:</b> subset or superset of BDD scenarios<br>
 - <b>Author(s):</b> customers, business analysts, product owner<br>
+
+# Testing Life Cycle
+- Define acceptance tests first <br>
+- Define features - cover as many scenarios as possible; write BDD tests <br>
+- Write unit tests (TDD cycle) in code <br>
