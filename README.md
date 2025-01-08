@@ -72,3 +72,18 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Define acceptance tests first <br>
 - Define features - cover as many scenarios as possible; write BDD tests <br>
 - Write unit tests (TDD cycle) in code <br>
+
+# Project Iterations
+1. Iteration 1:
+
+- Software feature with simple scenarios<br>
+- Understand basic concepts (feature file, step definitions, test runner)<br>
+- Parameters passing with regular expressions<br>
+- Hooks, tags and backgrounds<br>
+
+2. Iteration 2:
+
+- Practical scenario <br>
+- More complex Cucumber features - scenario outline and parameter transformation <br>
+- Hook step definitions to browser automation - with Selenium <br>
+- SpecFlow for .NET developers (REST API call) <br>
