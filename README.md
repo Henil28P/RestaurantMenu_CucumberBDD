@@ -151,3 +151,7 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Simple scenario written in business language (any stakeholder can understand as it is a domain-specific language)
 - Defines domain objects like customer, bill, discount and tax that helps the developers understand what type of domain objects need to be implemented.
 - Common source of truth for all stakeholders as system evolves.
+
+# Step definitions
+- A step definition file is a simple Java class
+- Feature steps in the feature file must have matching glue code in the step definitions file.
