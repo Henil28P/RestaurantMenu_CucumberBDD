@@ -8,8 +8,8 @@ public class MenuManagementSteps {
 	// Name of method doesn't matter
 	// Each method has an annotation that contains text that matches text specified in the feature file scenario steps
 	// Some values in "" in feature file scenario steps (such as "Cucumber sandwich" and 20) are extracted as method parameters (string, int) which are Cucumber expressions which can be available to be used in the method
-	
-	
+
+
 	@Given("I have a menu item with name {string} and price {int}")
 	public void i_have_a_menu_item_with_name_and_price(String string, Integer int1) {
 	    // Write code here that turns the phrase above into concrete actions
