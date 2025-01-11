@@ -145,3 +145,9 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 2. Solution: Feature file
 - Written in Gherkin domain-specific language (DSL)
 3. Example of Gherkin feature file - MenuManagement.feature in the newly created “features” package
+
+# How do feature files help?
+- They document common understanding of the business requirement
+- Simple scenario written in business language (any stakeholder can understand as it is a domain-specific language)
+- Defines domain objects like customer, bill, discount and tax that helps the developers understand what type of domain objects need to be implemented.
+- Common source of truth for all stakeholders as system evolves.
