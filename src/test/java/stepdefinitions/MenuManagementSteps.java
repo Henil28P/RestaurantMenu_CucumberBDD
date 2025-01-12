@@ -3,6 +3,7 @@ package stepdefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import restaurantmenu.cucumberbddproject.RestaurantMenu;
 import restaurantmenu.cucumberbddproject.RestaurantMenuItem;
 
 public class MenuManagementSteps {
@@ -17,12 +18,14 @@ public class MenuManagementSteps {
 	public void i_have_a_menu_item_with_name_and_price(String newMenuItemName, Integer price) {
 		// instantiate the RestaurantMenuItem for NewMenuItem field
 		NewMenuItem = new RestaurantMenuItem(newMenuItemName, newMenuItemName, price); // the RestaurantMenuItem class will take 3 parameters (item name, description, price) to give to constructor
+		System.out.println("Step 1");
 	}
 
 	@When("I add that menu item")
 	public void i_add_that_menu_item() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		RestaurantMenu LocationMenu; // Define a new class called RestaurantMenu
+		LocationMenu.Add(NewMenuItem); // to add the menu item which was just created earlier (a global class field)
+		System.out.println("Step 2");
 	}
 
 	@Then("Menu Item with name {string} should be added")
