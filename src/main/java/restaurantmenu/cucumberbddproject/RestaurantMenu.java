@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class RestaurantMenu {
 
 	// Below ArrayList holds an array list of restaurant menu items
-	ArrayList<RestaurantMenuItem> MenuItems = new ArrayList<RestaurantMenuItems>();
+	ArrayList<RestaurantMenuItem> MenuItems = new ArrayList<RestaurantMenuItem>();
 
 	// To add a menu item to the above MenuItems array list
 	public boolean addMenuItem(RestaurantMenuItem newMenuItem) throws IllegalArgumentException
