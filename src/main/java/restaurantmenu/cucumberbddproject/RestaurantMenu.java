@@ -13,4 +13,15 @@ public class RestaurantMenu {
 	{
 		return MenuItems.add(newMenuItem);
 	}
+
+	// Check if the Menu Item exists
+	public boolean DoesItemExist(RestaurantMenuItem newMenuItem)
+	{
+		boolean Exists = false; // initialise Exists boolean variable to true initially
+		if (MenuItems.contains(newMenuItem))
+		{
+			Exists = true; // set Exists to true if MenuItems ArrayList contains the newMenuItem from RestaurantMenuItem class
+		}
+		return Exists;
+	}
 }
