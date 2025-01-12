@@ -9,12 +9,11 @@ public class MenuManagementSteps {
 	// Each method has an annotation that contains text that matches text specified in the feature file scenario steps
 	// Some values in "" in feature file scenario steps (such as "Cucumber sandwich" and 20) are extracted as method parameters (string, int) which are Cucumber expressions which can be available to be used in the method
 
-
 	@Given("I have a menu item with name {string} and price {int}")
-	public void i_have_a_menu_item_with_name_and_price(String string, Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
-	    // Note: when running this, the moment it finds the Pending Exception, it will stop execution of that scenario
+	public void i_have_a_menu_item_with_name_and_price(String newMenuItemName, Integer price) {
+	    // Create a restaurant menu item - and this will need us to create a class called RestaurantMenuItem Java class as it is not defined yet in src/main/java/restaurantmenu.cucumberbddproject directory of this project which will stay along with App.java class
+		RestaurantMenuItem NewMenuItem;
+		NewMenuItem = new RestaurantMenuItem(newMenuItemName, "", price); // the RestaurantMenuItem class will take 3 parameters (item name, description, price) to give to constructor
 	}
 
 	@When("I add that menu item")
