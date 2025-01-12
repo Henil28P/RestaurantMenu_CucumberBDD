@@ -3,6 +3,7 @@ package stepdefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import restaurantmenu.cucumberbddproject.RestaurantMenuItem;
 
 public class MenuManagementSteps {
 	// Name of method doesn't matter
