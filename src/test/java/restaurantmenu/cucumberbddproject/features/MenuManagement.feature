@@ -23,15 +23,23 @@
 
 Feature: Menu Management
 
+@SmokeTest
 Scenario: Add a menu item
 Given I have a menu item with name "Cucumber sandwich" and price $20
 #And I have another menu item with name "Cucumber Salad"
 When I add that menu item
 Then Menu Item with name "Cucumber sandwich" should be added
 
-Scenario: Add a menu item
+@RegularTest
+Scenario: Add another menu item
 Given I have a menu item with name "Cucumber Salad" and price 15
 When I add that menu item
 Then Menu Item with name "Cucumber Salad" should be added
+
+@NightlyBuildTest @RegularTest
+Scenario: Add third menu item
+Given I have a menu item with name "Cheese Sandwich" and price 15
+When I add that menu item
+Then Menu Item with name "Cheese Sandwich" should be added
 
 # Note: we need to implement step definitions for the above 3 methods (Given, When, Then)
