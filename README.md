@@ -211,3 +211,8 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - If it was to be `tag={"@NightlyBuildTest and @RegularTest"}`, then it would run a scenario that uses and matches both tags --> this is the same as `tags={"@NightlyBuildTest", "@RegularTest"}`
 - To run all scenarios that don't match the tag @NightlyBuildTest: `tag={"not @NightlyBuildTest"}`
 - Note: If you apply a tag at the parent construct (above Feature definition in the feature file), then it will be applied to all scenarios under that feature.
+
+# Maven test with tags
+- For example: when `$ mvn test` is run, it will use the filtering that is applied in the Test Runner file in the `tags` parameter within the @CucumberOptions()
+- To override the filtering in the Test Runner file from the CLI Maven: `$ mvn test -Dcucumber.options=" --tags '@SmokeTest'"` which will run only scenario with @SmokeTest tag
+regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test Runner file as it will be overridden
