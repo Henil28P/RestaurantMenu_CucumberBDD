@@ -11,6 +11,10 @@ public class RestaurantMenu {
 	// To add a menu item to the above MenuItems array list
 	public boolean addMenuItem(RestaurantMenuItem newMenuItem) throws IllegalArgumentException
 	{
+		if (DoesItemExist(newMenuItem))
+		{
+			throw new IllegalArgumentException("Duplicate Item");
+		}
 		return MenuItems.add(newMenuItem);
 	}
 
