@@ -31,6 +31,6 @@ public class MenuManagementSteps {
 	@Then("Menu Item with name {string} should be added")
 	public void menu_Item_with_name_should_be_added(String string) {
 		boolean Exists = LocationMenu.DoesItemExist(NewMenuItem); // confirm if NewMenuItem added exists in arraylist in LocationMenu object of RestaurantMenu class
-	    System.out.println("Step 3");
+	    System.out.println("Step 3: " + Exists);
 	}
 }
