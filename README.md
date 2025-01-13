@@ -201,3 +201,10 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Don't forget to use escape characters \ (especially when working with Java) to make regexps valid
 - `\` is a reserved character in Java and should be escaped with an additional backslash character
 - Note: each capture group () maps to 1 input parameter in the steps definition method
+
+# Cucumber Tags
+- A value attached to feature, scenario, scenario outline, or examples
+- Attaching a tag helps us organise our Cucumber constructs as we can filter a feature or scenario based on tag value(s)
+- A common practical application is to test a subset of features or scenarios in a build process to filter some time-consuming features out from our continuous build process (we can include those features in a specialised nightly build process by applying tag-based filter)
+- In order to filter scenarios based on tags, we need to apply tags attribute in the Test Runner file as another parameter to @CucumberOptions with `tags={"tagname"}`
+- The `tag` parameter can be used in ways like: `tags={"@NightlyBuildTest,@RegularTest"}` which is same way as saying `tags={"@NightlyBuildTest or @RegularTest"}`
