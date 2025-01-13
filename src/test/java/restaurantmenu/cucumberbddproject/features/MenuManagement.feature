@@ -23,6 +23,14 @@
 
 Feature: Menu Management
 
+# If the Background were to run before each scenario, we would have the 3 steps from the Background
+# and 3 steps from each scenario, run 3 times
+# Therefore, total of 6 tests will be run 3 times and a total of 18 tests will be executed (6x3)
+Background: Add third menu item
+Given I have a menu item with name "Cheese Sandwich" and price 15
+When I add that menu item
+Then Menu Item with name "Cheese Sandwich" should be added
+
 @SmokeTest
 Scenario: Add a menu item
 Given I have a menu item with name "Cucumber sandwich" and price $20
