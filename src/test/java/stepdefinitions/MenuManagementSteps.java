@@ -14,6 +14,7 @@ public class MenuManagementSteps {
     // Create a restaurant menu item - and this will need us to create a class called RestaurantMenuItem Java class as it is not defined yet in src/main/java/restaurantmenu.cucumberbddproject directory of this project which will stay along with App.java class
 	RestaurantMenuItem NewMenuItem; // make it a class field/attribute
 	RestaurantMenu LocationMenu = new RestaurantMenu(); // define and instantiate the class RestaurantMenu
+	String ErrorMessage;
 
 	@Given("I have a menu item with name \"([^\"]+)\" and price ([$]*)(\\d+)") // change Cucumber Expressions of {int} to regular expressions such as ([0-9]+)
 	// From above regex of ([0-9]+), it means any digit from 0 to 9 occurring atleast once or more times
@@ -31,7 +32,14 @@ public class MenuManagementSteps {
 
 	@When("I add that menu item")
 	public void i_add_that_menu_item() {
-		LocationMenu.addMenuItem(NewMenuItem); // to add the menu item which was just created earlier (a global class field)
+		try
+		{
+			LocationMenu.addMenuItem(NewMenuItem); // to add the menu item which was just created earlier (a global class field)
+		}
+		catch (IllegalArgumentException ex)
+		{
+			ErrorMessage = ex.getMessage();
+		}
 		System.out.println("Step 2");
 	}
 
