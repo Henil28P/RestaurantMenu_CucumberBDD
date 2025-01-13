@@ -163,3 +163,26 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Copy the current path
 - In terminal: `cd <above path>`
 - Then, run `$ mvn test` → Maven will detect our test files and our scenarios and will give us a nicely formatted output that shows us there was 1 scenario, 3 tests passed
+
+# Regular Expressions
+1. Cucumber Expressions
+- Cucumber supports regular expressions
+- Step definitions are generated with Cucumber Expressions
+- You can mix Cucumber Expressions and Regular Expressions in the same step definitions file
+- You cannot mix Cucumber and Regular Expressions in the same step definition method.
+
+2. Regular Expressions
+- Regular Expressions are often cryptic at times and difficult to understand
+- They are highly flexible and powerful
+- Only need to know a small subset of regular expressions
+- Example: in the step definitions file, update Cucumber Expressions to Regular expressions:
+
+`@Given("I have a menu item with name {string} and price {int}")` contains the Cucumber Expressions {string} and {int}
+- {int} can be changed to ([0-9]+) where () is a capture group - it captures any info that is present provided it matches the regex [0-9]+ which means any number from 0 to 9 atleast once or more occurrences with + quantifier
+
+# Quantifiers
+- Define how many times a character needs to occur
+- + --> once or more
+- * --> 0 or more
+- ? --> zero or once
+- {n} --> exacty n-times occurrences
