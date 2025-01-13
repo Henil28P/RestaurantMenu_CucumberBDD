@@ -17,8 +17,8 @@
 		<junit.version>4.12</junit.version>
 		<cucumber.version>4.2.5</cucumber.version>
 		<maven.compiler.version>3.3</maven.compiler.version>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
