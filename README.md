@@ -216,3 +216,8 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - For example: when `$ mvn test` is run, it will use the filtering that is applied in the Test Runner file in the `tags` parameter within the @CucumberOptions()
 - To override the filtering in the Test Runner file from the CLI Maven: `$ mvn test -Dcucumber.options=" --tags '@SmokeTest'"` which will run only scenario with @SmokeTest tag
 regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test Runner file as it will be overridden
+
+# Cucumber Background
+- Background is something we add to a feature file - it is syntactically very similar to a Scenario
+- Background steps run before each scenario in a feature file
+- Another important aspect of Background is that it is visible to all stakeholders as it's part of our Gherkin feature file
