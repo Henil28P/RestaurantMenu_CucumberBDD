@@ -182,7 +182,15 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 
 # Quantifiers
 - Define how many times a character needs to occur
-- + --> once or more
-- * --> 0 or more
-- ? --> zero or once
-- {n} --> exacty n-times occurrences
+- `+` --> once or more
+- `*` --> 0 or more
+- `?` --> zero or once
+- `{n}` --> exacty n-times occurrences
+
+# Shorthand characters
+- `\d` - matches a single-digit character (and if you supply a quantifier such as +, *, or {n} -- that would match the number of characters but only numeric characters)
+- `\w` - matches a word character (alphabets, numbers, or underscore)
+- `\s` - matches a whitespace character, tabs, and end-of-line characters
+
+# Examples of other Regex
+- `[a-zA-Z0-9]+` - one or more occurence of any of the characters a-z, A-Z or any digits 0 to 9
