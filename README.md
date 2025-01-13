@@ -194,3 +194,10 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 
 # Examples of other Regex
 - `[a-zA-Z0-9]+` - one or more occurence of any of the characters a-z, A-Z or any digits 0 to 9
+
+# Regular Expressions summary
+- Let Cucumber generate regular expressions
+- Always inspect the auto-generated regular expressions as these are more leniant then they should be.
+- Don't forget to use escape characters \ (especially when working with Java) to make regexps valid
+- `\` is a reserved character in Java and should be escaped with an additional backslash character
+- Note: each capture group () maps to 1 input parameter in the steps definition method
