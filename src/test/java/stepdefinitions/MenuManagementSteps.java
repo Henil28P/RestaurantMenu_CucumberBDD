@@ -13,6 +13,7 @@ public class MenuManagementSteps {
 	
     // Create a restaurant menu item - and this will need us to create a class called RestaurantMenuItem Java class as it is not defined yet in src/main/java/restaurantmenu.cucumberbddproject directory of this project which will stay along with App.java class
 	RestaurantMenuItem NewMenuItem; // make it a class field/attribute
+	RestaurantMenu LocationMenu = new RestaurantMenu(); // define and instantiate the class RestaurantMenu
 	
 	@Given("I have a menu item with name {string} and price {int}")
 	public void i_have_a_menu_item_with_name_and_price(String newMenuItemName, Integer price) {
@@ -23,8 +24,7 @@ public class MenuManagementSteps {
 
 	@When("I add that menu item")
 	public void i_add_that_menu_item() {
-		RestaurantMenu LocationMenu; // Define a new class called RestaurantMenu
-		LocationMenu.Add(NewMenuItem); // to add the menu item which was just created earlier (a global class field)
+		LocationMenu.addMenuItem(NewMenuItem); // to add the menu item which was just created earlier (a global class field)
 		System.out.println("Step 2");
 	}
 
