@@ -157,3 +157,9 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - Feature steps in the feature file must have matching glue code in the step definitions file.
 - As we implement the step definitions, we are going to find things that are missing and need to be implemented - this is because we are doing TDD where a set of features written in a feature file are driving our code.
 - After all methods implemented in the Step Definitions file, a Test Runner is needed - those tests won't be run from Eclipse, but instead from a tool like Maven and need to implement a Test Runner file to do that.
+
+# Running a test: Maven test
+- Navigate to the folder where the project is and where the pom.xml file is
+- Copy the current path
+- In terminal: `cd <above path>`
+- Then, run `$ mvn test` → Maven will detect our test files and our scenarios and will give us a nicely formatted output that shows us there was 1 scenario, 3 tests passed
