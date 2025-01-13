@@ -208,3 +208,6 @@ A BDD and TDD-focused project using Cucumber tool with Java web app and Maven de
 - A common practical application is to test a subset of features or scenarios in a build process to filter some time-consuming features out from our continuous build process (we can include those features in a specialised nightly build process by applying tag-based filter)
 - In order to filter scenarios based on tags, we need to apply tags attribute in the Test Runner file as another parameter to @CucumberOptions with `tags={"tagname"}`
 - The `tag` parameter can be used in ways like: `tags={"@NightlyBuildTest,@RegularTest"}` which is same way as saying `tags={"@NightlyBuildTest or @RegularTest"}`
+- If it was to be `tag={"@NightlyBuildTest and @RegularTest"}`, then it would run a scenario that uses and matches both tags --> this is the same as `tags={"@NightlyBuildTest", "@RegularTest"}`
+- To run all scenarios that don't match the tag @NightlyBuildTest: `tag={"not @NightlyBuildTest"}`
+- Note: If you apply a tag at the parent construct (above Feature definition in the feature file), then it will be applied to all scenarios under that feature.
