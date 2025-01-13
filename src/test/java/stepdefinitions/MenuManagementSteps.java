@@ -14,8 +14,9 @@ public class MenuManagementSteps {
     // Create a restaurant menu item - and this will need us to create a class called RestaurantMenuItem Java class as it is not defined yet in src/main/java/restaurantmenu.cucumberbddproject directory of this project which will stay along with App.java class
 	RestaurantMenuItem NewMenuItem; // make it a class field/attribute
 	RestaurantMenu LocationMenu = new RestaurantMenu(); // define and instantiate the class RestaurantMenu
-	
-	@Given("I have a menu item with name {string} and price {int}")
+
+	@Given("I have a menu item with name {string} and price ([0-9]+)") // change Cucumber Expressions of {int} to regular expressions such as ([0-9]+)
+	// From above regex of ([0-9]+), it means any digit from 0 to 9 occurring atleast once or more times
 	public void i_have_a_menu_item_with_name_and_price(String newMenuItemName, Integer price) {
 		// instantiate the RestaurantMenuItem for NewMenuItem field
 		NewMenuItem = new RestaurantMenuItem(newMenuItemName, newMenuItemName, price); // the RestaurantMenuItem class will take 3 parameters (item name, description, price) to give to constructor
