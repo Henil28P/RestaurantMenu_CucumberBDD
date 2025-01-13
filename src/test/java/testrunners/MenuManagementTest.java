@@ -12,6 +12,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features={"src/test/java/restaurantmenu/cucumberbddproject/features"}, // path of where all features are located (in the "features" package)
 		glue={"stepdefinitions"}, // package name of where the step definitions are located
+		tags= {"@NightlyBuildTest,@RegularTest"}, // to filter scenario based on tag name of that scenario
 		plugin={"pretty"} // use a plugin "pretty" which will be used when generating nice looking outputs
 		)
 // No implementation in this class as it tells the build tool or Java compiler to use Cucumber tests (CucumberOptions) and it links the feature file with the glue (stepdefinitions)
