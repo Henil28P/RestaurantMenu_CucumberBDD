@@ -15,8 +15,11 @@ public class MenuManagementSteps {
 	RestaurantMenuItem NewMenuItem; // make it a class field/attribute
 	RestaurantMenu LocationMenu = new RestaurantMenu(); // define and instantiate the class RestaurantMenu
 
-	@Given("I have a menu item with name {string} and price ([0-9]+)") // change Cucumber Expressions of {int} to regular expressions such as ([0-9]+)
+	@Given("I have a menu item with name {string} and price (\\d+)") // change Cucumber Expressions of {int} to regular expressions such as ([0-9]+)
 	// From above regex of ([0-9]+), it means any digit from 0 to 9 occurring atleast once or more times
+	// The (\\d+) regex is a shorthand character that represents 0 to 9 (or numeric digits with \d) and an extra \ in front is an escape character
+	// If the regex was to be ([0-9]{4}), it means any combination of digits from 0 to 9 exactly 4 times such as 1234 or 0000 or 9999 or 4321, etc would match
+	// If the regex was to be ([0-9]*), it means occurrences of digits 0-9 zero or more times
 	public void i_have_a_menu_item_with_name_and_price(String newMenuItemName, Integer price) {
 		// instantiate the RestaurantMenuItem for NewMenuItem field
 		NewMenuItem = new RestaurantMenuItem(newMenuItemName, newMenuItemName, price); // the RestaurantMenuItem class will take 3 parameters (item name, description, price) to give to constructor
