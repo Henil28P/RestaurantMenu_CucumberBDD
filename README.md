@@ -292,3 +292,17 @@ Answer 1: Implement a scenario outline with each row in the spreadsheet mapping 
 Answer 2: Pass the parameter values by introducing a data table in the step definition.
 - A data table is designed to handle scenarios where a large number of parameters need to be passed. Splitting the steps is technically correct, but it may not be the best way to pass multiple parameters.
 If our step has 50 parameters, we will have to introduce 50 steps, thereby making our feature file less readable and maintainable.
+
+# Cucumber Advance Features - Web browser automation with Selenium
+- We can introduce some web-browser based testing to our existing scenario with Selenium
+- Step definitions will envoke some Selenium-based code which, in turn, will use a browser-specific driver to invoke a web page and interact with it.
+- Selenium refers to a suite of products - we will only use Selenium WebDriver dependencies for Java and Chrome browser.
+- Web Testing architecture:
+1. Language bindings (Java, Python, C#, etc) - interact with browser-specific drivers by using JSON-encoded messages to transfer data over HTTP
+2. Browser-specific drivers - each driver has its own web server for this interaction. Each driver will invoke a HTTP request to their respective browser and give HTTP response back.
+
+# Key concepts
+- Cucumber has no knowledge of Selenium or any web browser (Cucumber does not automate web interface testing)
+- Cucumber's job is to match scenario steps to step definition methods - what we write in the step definitions is up to us.
+- It is Selenium that implements web interface automation
+- Selenium hooks Cucumber step definitions to web browser automation
