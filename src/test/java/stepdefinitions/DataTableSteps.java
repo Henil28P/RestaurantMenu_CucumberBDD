@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import java.util.List;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
@@ -7,14 +9,13 @@ import cucumber.api.java.en.Then;
 public class DataTableSteps {
 	@Given("I placed an order for the following items")
 	public void i_placed_an_order_for_the_following_items(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-	    // For other transformations you can register a DataTableType.
-	    throw new cucumber.api.PendingException();
+	    List<String> BillData = dataTable.asList(String.class); // read the bill data table as a list
+
+	    // Output the data from the above list of strings
+	    for (String BillItem: BillData)
+	    {
+	    	System.out.println(BillItem); // output each data item on each iteration of item in BillData list
+	    }
 	}
 
 	@When("I generate the bill")
