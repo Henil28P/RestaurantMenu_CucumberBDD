@@ -11,9 +11,12 @@ import cucumber.api.junit.Cucumber;
 // this class will link the Feature file with the step definitions
 @CucumberOptions(
 		features={"src/test/java/restaurantmenu/cucumberbddproject/features"}, // path of where all features are located (in the "features" package)
-		glue={"stepdefinitions","hooks"}, // package name of where the step definitions are located
+		glue={"stepdefinitions"}, // package name of where the step definitions are located
 		tags= {"not @NightlyBuildTest"}, // to filter scenario on tag name of that scenario
-		plugin={"pretty"} // use a plugin "pretty" which will be used when generating nice looking outputs
+		plugin={"pretty",
+				"html:target/SystemTestReports/html",
+				"json:target/SystemTestReports/json/report.json",
+				"junit:target/SystemTestReports/junit/report.xml"} // use a plugin "pretty" which will be used when generating nice looking outputs
 		)
 // No implementation in this class as it tells the build tool or Java compiler to use Cucumber tests (CucumberOptions) and it links the feature file with the glue (stepdefinitions)
 // Note: All the parameter values of @CucumberOptions are multiple values or an array of strings (eg. for glue parameter, we can specify multiple package names as step definitions could be in multiple files sometimes)
