@@ -33,3 +33,12 @@ Given I placed an order for the following items
 |Cucumber Salad|1|15|
 When I generate the bill
 Then a bill for $55 should be generated
+
+@ListofMaps
+Scenario: Bill Amount Generation
+Given I placed an order for the following items
+|ItemName					|Units|UnitPrice| # column headers (can use list of maps)
+|Cucumber Sandwich|2		|20|
+|Cucumber Salad		|1		|15|
+When I generate the bill
+Then a bill for $55 should be generated
