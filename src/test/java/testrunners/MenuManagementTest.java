@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features={"src/test/java/restaurantmenu/cucumberbddproject/features"}, // path of where all features are located (in the "features" package)
 		glue={"stepdefinitions"}, // package name of where the step definitions are located
-		tags= {"not @NightlyBuildTest"}, // to filter scenario on tag name of that scenario
+		tags= {"@ListofStrings"}, // to filter scenario on tag name of that scenario
 		plugin={"pretty",
 				"html:target/SystemTestReports/html",
 				"json:target/SystemTestReports/json/report.json",
