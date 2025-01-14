@@ -249,3 +249,7 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 - The purpose of `dryRun` is to not execute any step definitions method but just to check if our scenario steps in our feature file are mapped to step definition methods
 - `dryRun` configuration parameter is set to 'false' by default (ie. `dryRun=true`)
 - `dryRun` should be set to false if we want to just check if we added some new scenario steps and we want to generate method stubs for those but we don't want to run all the tests
+- Impact of setting `dryRun=true`: Cucumber checks if each scenario has a corresponding step definition. The steps are not executed.
+
+# Using monochrome configuration parameter
+- For more readable outputs and removes unnecessary some special characters
