@@ -26,7 +26,7 @@ Feature: Menu Management
 # If the Background were to run before each scenario, we would have the 3 steps from the Background
 # and 3 steps from each scenario, run 3 times
 # Therefore, total of 6 tests will be run 3 times and a total of 18 tests will be executed (6x3)
-Background: Add third menu item
+Background: Setup a menu item
 Given I have a menu item with name "Cheese Sandwich" and price 15
 When I add that menu item
 Then Menu Item with name "Cheese Sandwich" should be added
@@ -48,6 +48,6 @@ Then Menu Item with name "Cucumber Salad" should be added
 Scenario: Add third menu item
 Given I have a menu item with name "Cheese Sandwich" and price 15
 When I add that menu item
-Then Menu Item with name "Cheese Sandwich" should be added
+Then I should see an error message with value "Duplicate Item"
 
 # Note: we need to implement step definitions for the above 3 methods (Given, When, Then)
