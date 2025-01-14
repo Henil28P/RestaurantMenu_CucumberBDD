@@ -253,3 +253,11 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 
 # Using monochrome configuration parameter
 - For more readable outputs and removes unnecessary some special characters
+
+# Summary
+- Which Cucumber construct should we use to open and close database connections? `hooks`
+- Hooks are perfectly suited for technical steps that non-programmer stakeholders typically do not need to see. We could open database connections in before hooks and close database connections in after hooks.
+- Order of execution of background and hooks: `before hook, background steps, after hook`
+- Background steps run before each scenario in a scenario file
+- `$ mvn test -Dcucumber.options="--tags '@QuickTest'"` --> running this Maven command will execute all scenarios matching tag 'QuickTest'
+- `tags={"@RegularTest","@NightlyBuildTest"}` --> this filter will execute scenarios with the tags `RegularTest` and `NightlyBuildTest` applied.
