@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import static org.junit.Assert.assertEquals;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -47,5 +48,10 @@ public class MenuManagementSteps {
 	public void menu_Item_with_name_should_be_added(String string) {
 		boolean Exists = LocationMenu.DoesItemExist(NewMenuItem); // confirm if NewMenuItem added exists in arraylist in LocationMenu object of RestaurantMenu class
 	    System.out.println("Step 3: " + Exists);
+	}
+	
+	@Then("I should see an error message with value {string}")
+	public void i_should_see_an_error_message_with_value(String string) {
+	    assertEquals("Duplicate Item", ErrorMessage); // use Assertion framework to compare the outputs (comparing what is returned from the exception error with our own error message which is Duplicate item)
 	}
 }
