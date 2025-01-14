@@ -261,3 +261,17 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 - Background steps run before each scenario in a scenario file
 - `$ mvn test -Dcucumber.options="--tags '@QuickTest'"` --> running this Maven command will execute all scenarios matching tag 'QuickTest'
 - `tags={"@RegularTest","@NightlyBuildTest"}` --> this filter will execute scenarios with the tags `RegularTest` and `NightlyBuildTest` applied.
+
+# Cucumber data table
+- When we supply tabular data to a scenario step, Cucumber generates a special data type called `data table`.
+- We need to write data parsing logic to parse data in these data tables
+- There are many ways to parse data from these data table which makes the process a bit confusing
+- There are many other data parsing techniques
+- Data tables are very powerful constructs
+- Use data tables to write highly reusable and compact test scenarios
+- Read `DataTable.raw()` (to read the contents of the data table as a list of list of strings) and use the `.get()` method to inspect elements
+- Data values in tables can be numeric as well as string (eg. Data tables can be read in a map with integer values as key and string values as value)
+
+# Data Tables: List of maps
+- A map is a collection of key-value pair and can be used in the case of column headers being used
+- A map consists of the following: Each header of the data table becomes the key and the data value for each header on 1st row becomes the value - this is 1st map and this goes on for next map for 2nd row, 3rd row, etc... nth row for nth map in the list
