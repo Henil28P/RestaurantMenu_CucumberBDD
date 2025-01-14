@@ -244,3 +244,8 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 - Unlike HTML, JSON and XML outputs are single files so we need to specify the file name in the value of 'pretty' prameter at the end of the path
 - To see the reports generated for this project in HTML, JSON and XML: navigate to the path target/SystemTestReports and check all 3 folders (html, json, xml)
 - Regarding JSON-formatted output report, use a third-party tool to parse the info and store it and display somewhere else.
+
+# Using dryRun parameter
+- The purpose of `dryRun` is to not execute any step definitions method but just to check if our scenario steps in our feature file are mapped to step definition methods
+- `dryRun` configuration parameter is set to 'false' by default (ie. `dryRun=true`)
+- `dryRun` should be set to false if we want to just check if we added some new scenario steps and we want to generate method stubs for those but we don't want to run all the tests
