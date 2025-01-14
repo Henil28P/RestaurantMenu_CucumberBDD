@@ -16,6 +16,12 @@ public class MenuManagementSteps {
 	RestaurantMenuItem NewMenuItem; // make it a class field/attribute
 	RestaurantMenu LocationMenu = new RestaurantMenu(); // define and instantiate the class RestaurantMenu
 	String ErrorMessage;
+	
+	// Add a constructor to see how step definitions file is instantiated after every scenario run
+	public MenuManagementSteps()
+	{
+		System.out.println("Constructor called");
+	}
 
 	@Given("I have a menu item with name \"([^\"]+)\" and price ([$]*)(\\d+)") // change Cucumber Expressions of {int} to regular expressions such as ([0-9]+)
 	// From above regex of ([0-9]+), it means any digit from 0 to 9 occurring atleast once or more times
