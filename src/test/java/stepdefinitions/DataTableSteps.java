@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import java.util.List;
+import java.util.Map;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -9,14 +10,16 @@ import cucumber.api.java.en.Then;
 public class DataTableSteps {
 	@Given("I placed an order for the following items")
 	public void i_placed_an_order_for_the_following_items(io.cucumber.datatable.DataTable dataTable) {
-	    List<List<String>> BillData = dataTable.asLists(String.class); // read the bill data table as a list
+	    List<Map<String,String>> BillData = dataTable.asMaps(String.class,String.class); // read the bill data table as a list
+	    // A map is a collection of key-value pair (in this case both having data type of String
 
 	    // Output the data from the above list of list of strings by using nested for loop (2 for loops)
-	    for (List<String> BillItems: BillData) // 1st loop will be a list of strings (BillItems)
+	    for (Map<String,String> BillItems: BillData) // 1st loop will be a list of strings (BillItems)
 	    {
-	    	for (String BillItem: BillItems) // 2nd loop of BillItem to iterate over the list of strings (BillItems)
+	    	for (Map.Entry<String,String> BillItem: BillItems.entrySet()) // 2nd loop of BillItem to iterate over the list of strings (BillItems)
 	    	{
-	    		System.out.println(BillItem); // output each data item on each iteration of item in BillData list
+	    		System.out.println("Key: " + BillItem.getKey()); // output each key of the map for each iteration
+	    		System.out.println("Value: " + BillItem.getValue()); // output value of each key of the map for each iteration
 	    	}
 	    }
 	}
