@@ -9,12 +9,15 @@ import cucumber.api.java.en.Then;
 public class DataTableSteps {
 	@Given("I placed an order for the following items")
 	public void i_placed_an_order_for_the_following_items(io.cucumber.datatable.DataTable dataTable) {
-	    List<String> BillData = dataTable.asList(String.class); // read the bill data table as a list
+	    List<List<String>> BillData = dataTable.asLists(String.class); // read the bill data table as a list
 
-	    // Output the data from the above list of strings
-	    for (String BillItem: BillData)
+	    // Output the data from the above list of list of strings by using nested for loop (2 for loops)
+	    for (List<String> BillItems: BillData) // 1st loop will be a list of strings (BillItems)
 	    {
-	    	System.out.println(BillItem); // output each data item on each iteration of item in BillData list
+	    	for (String BillItem: BillItems) // 2nd loop of BillItem to iterate over the list of strings (BillItems)
+	    	{
+	    		System.out.println(BillItem); // output each data item on each iteration of item in BillData list
+	    	}
 	    }
 	}
 
