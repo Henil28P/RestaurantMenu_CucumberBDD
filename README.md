@@ -221,3 +221,6 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 - Background is something we add to a feature file - it is syntactically very similar to a Scenario
 - Background steps run before each scenario in a feature file
 - Another important aspect of Background is that it is visible to all stakeholders as it's part of our Gherkin feature file
+
+# How a step definitions file is instantiated?
+- A step definitions file is instantiated before each scenario is run (eg. for 3 scenarios, it should get instantiated thrice).
