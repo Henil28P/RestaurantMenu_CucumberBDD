@@ -224,3 +224,23 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 
 # How a step definitions file is instantiated?
 - A step definitions file is instantiated before each scenario is run (eg. for 3 scenarios, it should get instantiated thrice).
+
+# Cucumber Hooks
+- Similar to setup and teardown methods in Unit testing
+- Cucumber Hooks are classes that contain methods that have special annotations (namely before and after) and those methods execute before or after each scenario.
+- Note: if there is a 'before' hook applicable to a scenario, it runs before background and also before the constructor of the step definitions file.
+- Cucumber Hooks are very useful if we are going to do smoe initialisation or clean up work after each scenario is run (eg. clearing browser cache, cleaning database connections).
+
+# Tagged Hooks
+- To have hooks class and its methods to run before a small subset of our scenarios, we can apply a tag beside @Before or @After (eg. @Before("@SmokeTest"))
+
+# Background vs. Hooks: Which one to choose?
+- Background --> if nonprogrammer stakeholders need to see some initialisation (Background is defined inside our feature file which is seen by all programmer and nonprogrammer stakeholders)
+- Hooks --> for programming specific execution (eg. clearing browser cache or connection reset of databases).
+
+# Cucumber Hooks: Generate reports
+- Cucumber test output as a file to be distributed to teammates instead of Eclipse console or command prompts
+- Use 'pretty' plugin to generate formatted reports and outputs (pretty is a parameter in @CucumberOptions in Test runner file)
+- Unlike HTML, JSON and XML outputs are single files so we need to specify the file name in the value of 'pretty' prameter at the end of the path
+- To see the reports generated for this project in HTML, JSON and XML: navigate to the path target/SystemTestReports and check all 3 folders (html, json, xml)
+- Regarding JSON-formatted output report, use a third-party tool to parse the info and store it and display somewhere else.
