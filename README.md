@@ -275,3 +275,20 @@ regardless of `tags={"@NightlyBuildTest", "@RegularTest"}` present in the Test R
 # Data Tables: List of maps
 - A map is a collection of key-value pair and can be used in the case of column headers being used
 - A map consists of the following: Each header of the data table becomes the key and the data value for each header on 1st row becomes the value - this is 1st map and this goes on for next map for 2nd row, 3rd row, etc... nth row for nth map in the list
+
+# Scenario Outline
+- Worksheets are powerful tool to do data-driven testing.
+- Each test scenario could be documented as a row in a worksheet - we could have multiple input values and output(s) can be listed and compared with the expected outputs to mark a test case as 'pass' or 'fail'
+- A cucumber construct: Scenario outline is driven by a table with a keyword `Examples`
+- Different rows in the table are run one-by-one to execute different test scenarios
+- A scenario outline essentially runs once for each row in the examples table and it plugs in values from that row into the variables
+- A scenario outline is a test that runs in a loop - we can read the values in feature file and compare them with the system calculated values to pass and fail a test.
+
+# Summary of Scenario outline
+1. Imagine a test lead hands over a spreadsheet where each row represents a set of input values and an output. What is the best way to map tests written in the spreadsheet to Cucumber feature files?
+Answer 1: Implement a scenario outline with each row in the spreadsheet mapping to an examples table row.
+
+2. We have a scenario step with 10 input parameters. What is the best way to pass all parameter values the corresponding step definition method?
+Answer 2: Pass the parameter values by introducing a data table in the step definition.
+- A data table is designed to handle scenarios where a large number of parameters need to be passed. Splitting the steps is technically correct, but it may not be the best way to pass multiple parameters.
+If our step has 50 parameters, we will have to introduce 50 steps, thereby making our feature file less readable and maintainable.
